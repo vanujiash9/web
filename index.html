@@ -17,7 +17,6 @@
             margin: 0;
         }
 
-        /* Kiểu cho header dưới */
         .header-bottom {
             background-color:#e9e5e5;
             color: wheat;
@@ -63,12 +62,12 @@ nav ul li a {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Màu đen nhạt với độ trong suốt 0.5 */
-            opacity: 0; /* Ẩn overlay ban đầu */
-            transition: opacity 0.2s; /* Hiệu ứng mượt mà khi thay đổi opacity */
+            background: rgba(0, 0, 0, 0.5); 
+            opacity: 0; 
+            transition: opacity 0.2s; 
         }
 
-        /* Hiển thị overlay khi di chuột qua hình ảnh */
+       
         .image-container:hover .overlay {
             opacity: 1;
         }
@@ -106,9 +105,9 @@ nav ul li a {
         .product p {
             font-size: 1.2rem;
         }
-        /* CSS cho hiệu ứng làm mờ khi :hover (người dùng di chuột vào) */
+      
 .product:hover img {
-    filter: brightness(70%); /* Làm mờ hình ảnh khi di chuột vào */
+    filter: brightness(70%); 
 }
 
         .product button {
@@ -125,7 +124,7 @@ nav ul li a {
             background-color: #0056b3;
         }
 
-        /* Thiết lập kiểu cho footer */
+   
         footer {
             background-color: #333;
             color: #fff;
@@ -135,20 +134,19 @@ nav ul li a {
     
         .image-text {
     position: absolute;
-    top:50%; /* Đặt văn bản ở giữa theo chiều dọc */
-    left: 60%; /* Đặt văn bản ở giữa theo chiều ngang */
-    transform: translate(130%, 0%); /* Dịch văn bản lên trên và sang trái 50% để đặt ở giữa */
+    top:50%; 
+    left: 60%; 
+    transform: translate(130%, 0%); 
     text-align: center;
     color:gold;
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Đổ bóng văn bản */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-/* CSS cho biểu tượng thông báo */
 .notification-icon {
-    font-size: 16px; /* Kích thước biểu tượng */
-    color: black; /* Màu của biểu tượng */
-    margin-right: 5px; /* Khoảng cách từ phải của biểu tượng đến văn bản */
+    font-size: 16px;
+    color: black; 
+    margin-right: 5px; 
 }
 .text{
     text-align: center;
@@ -157,24 +155,24 @@ nav ul li a {
     
 }
 .image {
-            width: 30%; /* Độ rộng của mỗi ảnh, bạn có thể điều chỉnh theo ý muốn */
+            width: 30%;
             margin-bottom: 20px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng đổ cho ảnh */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         }
         .custom-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Tạo 3 cột */
-            gap: 20px; /* Khoảng cách giữa các ảnh */
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px;
             padding: 20px;
         }
 
-        /* CSS cho mỗi ảnh */
+
         .custom-image {
-            width: 100%; /* Độ rộng của mỗi ảnh, điều này làm cho ảnh điền vào cột */
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng đổ cho ảnh */
+            width: 100%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
         }
 
-        /* CSS cho tiêu đề của mỗi ảnh */
+      
         .custom-caption {
             text-align: center;
             font-weight: bold;
@@ -182,12 +180,12 @@ nav ul li a {
         }
     .end{
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Tạo 3 cột */
+        grid-template-columns: repeat(2, 1fr);
             padding: 20px;
     }
     .finish{
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Tạo 3 cột */
+        grid-template-columns: repeat(4, 1fr);
         padding: 20px;
     }
     
@@ -234,13 +232,13 @@ nav ul li a {
  <p >Maxions® là lựa chọn hàng đầu dành cho các tín đồ thời trang Đường phố sành điệu. Sứ mệnh của Maxions® là trao quyền cho thế hệ trẻ toàn thế giới tự do thể hiện phong cách thông qua thời trang, thương hiệu vượt qua ranh giới của thời trang đường phố bằng cách không ngừng sáng tạo các trang phục với các bộ sưu tập độc đáo.</p>
 
  <div class="custom-grid">
-    <!-- Ảnh 1 -->
+   
     <div class="custom-image">
         <img src="https://levents.asia/wp-content/uploads/2023/02/Hinh-anh-04_.png" alt="Ảnh 1">
         <div class="custom-caption"></div>
     </div>
 
-    <!-- Ảnh 2 -->
+  
     <div class="custom-image">
         <img src="https://levents.asia/wp-content/uploads/2023/02/Hinh-anh-02_.png" alt="Ảnh 2">
         <div class="custom-caption"></div>
@@ -274,7 +272,7 @@ nav ul li a {
         <div class="custom-caption"></div>
     </div>
 
-    <!-- Thêm các ảnh khác tại đây -->
+  
 
 </div>
 <div>
