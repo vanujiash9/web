@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Ký</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/register.css">
+
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="register()">
+            <h2>Tạo Tài Khoản</h2>
+            <div class="input-container">
+                <input type="text" id="firstName" name="firstName" placeholder="Họ và tên *" required>
+            </div>
+            <div class="input-container">
+                <input type="text" id="lastName" name="lastName" placeholder="Tên đăng nhập *" required>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" name="email" placeholder="Email *" required>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" name="password" placeholder="Mật khẩu *" required>
+            </div>
+            <div class="input-container">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Xác nhận mật khẩu *" required>
+            </div>
+            <div onclick="register()">Đăng Ký</div>
+            <p>Bạn đã có tài khoản? <a href="" style="color: red;">Đăng nhập</a></p>
+        </form>
+    </div>
+
+    <script>
+        let userData = JSON.parse(localStorage.getItem('userData') ) || [];
+        const randomId = () => {
+            let newId = Math.floor(Math.random() *9999)
+            return newId;
+        }
+      const register =() => {
+        let username = document.getElementById('firstName').value 
+        let email = document.getElementById('email').value 
+        //kiểm tra email có tồn tại hay chưa -- hàm find => true or false
+        let checkExist = userData.find(item => item.email == email)
+        let password = document.getElementById('password').value 
+        let confirmPassword = document.getElementById('confirmPassword').value;
+        
+          if( password !== confirmPassword){
+        alert('Mật khẩu không trùng khớp')
+      } else if(checkExist ){
+      alert('Tên đăng nhập đã được đăng ký')
+      }
+      else{
+        let newUser ={
+            id : randomId(),
+            username : username,
+            email : email,
+            password : password,
+        }
+        userData.push(newUser)
+     
+        localStorage.setItem('userData',JSON.stringify(userData))
+    alert('Đăng ký thành công')
+    window.location.href = 'login.html'
+    }
+}
+    </script>
+</body>
+</html>

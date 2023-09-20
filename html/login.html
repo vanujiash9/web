@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Đăng nhập</label>
+        <br>
+        <input id="email" type="email"  placeholder= 'Email' >
+        <br>
+        <input id="password" type="password"  placeholder= 'Mật khẩu' >
+   <br>
+   <button type="submit">Đăng nhập</button>
+    </form>
+    <a href="regester.html">Đăng ký</a>
+    <script>
+        function login(){
+            let email = document.getElementById('email').value 
+            let password = document.getElementById('password').value 
+            let arrEmail =[]
+            let arrPass =[]
+            for(let i =0; i<userData.length; i++){
+                arrEmail.push(userData[i].email);
+                arrPass.push(userData[i].password)
+            }
+            let index = arrEmail.indexOf(email)
+            if(index != 1){
+                if(arrPass[index] == password){
+                    alert('Đăng nhập thành công')
+                    window.location.href ='../index.html'
+                }else{
+            alert('Sai mật khẩu')
+         }
+            }
+            else{
+                alert('Email không tồn tại')
+            }
+        }
+    </script>
+</body>
+</html>
