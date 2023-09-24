@@ -1,5 +1,5 @@
 .header-top {
-    background-color: #690b0b;
+    background-color: rgb(32, 19, 26);
     color:rgb(135, 233, 149);
     padding: 20px 0;
     text-align: center;
@@ -11,7 +11,7 @@
 }
 
 .header-bottom {
-    background-color: #690b0b;
+    background-color: rgb(32, 19, 26);
     color: wheat;
     padding: 20px 0;
     text-align: center;
@@ -42,7 +42,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: pink;
 }
 
 .image-container {
@@ -66,9 +66,7 @@ img {
     transition: opacity 0.2s;
 }
 
-.image-container:hover .overlay {
-    opacity: 1;
-}
+
 
 .intro {
     display: flex;
