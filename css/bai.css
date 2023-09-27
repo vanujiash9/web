@@ -1,5 +1,5 @@
 .header-top {
-    background-color: rgb(32, 19, 26);
+    background-color: rgb(15, 128, 126);
     color:rgb(135, 233, 149);
     padding: 20px 0;
     text-align: center;
@@ -11,8 +11,8 @@
 }
 
 .header-bottom {
-    background-color: rgb(32, 19, 26);
-    color: wheat;
+    background-color: rgb(15, 128, 126);
+    color: weat;
     padding: 20px 0;
     text-align: center;
     border: 1px solid black;

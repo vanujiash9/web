@@ -8,7 +8,7 @@
      <link rel="stylesheet" href="../baitapweb/html/login.html">
     <link rel="stylesheet" href="../baitapweb/html/regester.html">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
+<link rel="stylesheet" href="../baitapweb/html/cart.html">
 </head>
 <body>
     <div class="header-top">
@@ -17,7 +17,7 @@
             <ul class="intro">
                 <li><a href="#"><i class="fas fa-bell notification-icon"></i></a></li>
                 <li><a href="#"><i class="fas fa-search search-icon" ></i><input type="text" placeholder="Tìm kiếm"></a></li>
-                <li><a href="#"><i class="fas fa-shopping-cart cart-icon"></i> </a></li>
+                <li><a href="../baitapweb/html/cart.html"><i class="fas fa-shopping-cart cart-icon"></i> </a></li>
                 <li><a href="#"><i class="fas fa-user user-icon"></i> </a></li>
             </ul>
         </nav>
@@ -225,44 +225,10 @@
 </div>
 <header style="background-color: black; color: white; padding: 8px;">
     <p style="text-align: center;">Maxions® - Share your color with the world </p></p>
-<img src="" alt="">
+
 </header>
 </div>
-<div>
 
-    <script>
-      const productData = [
-    {
-        id: 1,
-        img: "./0726932d701cfaca40da46997cb61cfa.jpg",
-        name: "Minions cute nè",
-        price: 999,
-    },
-    // Thêm các sản phẩm khác vào đây nếu cần
-];
-
-function renderProduct() {
-    let element = "";
-    for (let i = 0; i < productData.length; i++) {
-        const product = productData[i];
-        element += `
-            <div class="card">
-                <section class="product"> 
-                    <img src="${product.img}" alt="${product.name}">
-                    <h2>${product.name}</h2>
-                    <p style="color: red">Giá: ${product.price} vnđ</p>
-                    <button>Thêm vào giỏ hàng</button>
-                </section>
-            </div>
-        `;
-    }
-    // Đảm bảo bạn thực hiện công việc gì đó với biến element sau khi đã tạo nó, ví dụ: gán nó vào một phần tử HTML nào đó để hiển thị sản phẩm.
-}
-
-// Gọi hàm renderProduct để hiển thị sản phẩm
-renderProduct();
-
-
-    </script>
+    
 </body>
 </html>
