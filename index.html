@@ -2,6 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAXIONS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web</title>
     <link rel="stylesheet" href="./html/">
     <link rel="stylesheet" href="../baitapweb/css/bai.css">
@@ -102,54 +105,53 @@
     <h3 style="font-family: Arial, Helvetica, sans-serif; margin-top: 30px; color: red">Sản phẩm nổi bật</h3>
 </div>
    <main id="cardlist">
-    <section class="product"> 
+    <section class="product">
         <img src="https://levents.asia/wp-content/uploads/2022/09/B1-font-552x944-100.jpg" alt="Sản phẩm 1">
-         <h2> MAXIONS® |DORAEMON COLLAB TEE/BLACK</h2>
-         <p style="color: red">Giá: 304,500vnđ </p>
-         <button>Thêm vào giỏ hàng</button>
-    </section>
+        <h2>MAXIONS® | DORAEMON COLLAB TEE/BLACK</h2>
+        <p style="color: red">Giá: 304,500vnđ </p>
+        <p><button onclick="addCart(1, 304500)">Thêm vào giỏ hàng</button></p>
+      </section>
     <section class="product"> 
         <img src="https://levents.asia/wp-content/uploads/2022/09/C1-font-552x944-100.jpg" alt="Sản phẩm 2">
          <h2>MAXIONS® |DORAEMON HOODIE/ CREAM</h2>
          <p style="color: red">Giá: 347,500vnđ </p>
-         <button>Thêm vào giỏ hàng</button>
+         <p><button onclick="addCart(1,347500)">Thêm vào giỏ hàng</button></p>
     </section>
     <section class="product"> 
         <img src="https://levents.asia/wp-content/uploads/2022/09/A1-font-552x944-100.jpg" alt="Sản phẩm 3">
          <h2>MAXIONS® | DORAEMON CAT TEE/ CREAM</h2>
          <p style="color: red">Giá: 276,500vnđ </p>
-         <button>Thêm vào giỏ hàng</button>
+         <p><button onclick="addCart(1,276500)">Thêm vào giỏ hàng</button></p>
     </section>
     <section class="product"> 
         <img src="https://levents.asia/wp-content/uploads/2022/07/H-1-100.jpg" alt="Sản phẩm 3">
          <h2> MAXIONS® POPULAR LOGO 2.0 TEE/ GREEN</h2>
          <p style="color: red">Giá: 370,000vnđ </p>
-         <button>Thêm vào giỏ hàng</button>
-    </section>
+         <p><button onclick="addCart(1,370000)">Thêm vào giỏ hàng</button></p>    </section>
     <section class="product"> 
         <img src="https://levents.asia/wp-content/uploads/2022/07/G-1_1-100.jpg" alt="Sản phẩm 3">
          <h2>
             MAXIONS® POPULAR LOGO 2.0 TEE/ RED</h2>
          <p style="color: red">Giá:276,500vnđ </p>
-         <button>Thêm vào giỏ hàng</button>
+         <p><button onclick="addCart(1,276500)">Thêm vào giỏ hàng</button></p>
     </section>
     <section class="product"> 
         <img src="https://levents.asia/wp-content/uploads/2022/07/C-1-100.jpg" alt="Sản phẩm 3">
          <h2>MAXIONS® EARTH TEE/ WHITE</h2>
          <p style="color: red">Giá:288,500vnđ </p>
-         <button>Thêm vào giỏ hàng</button>
+       <p><button onclick="addCart(1,288500)">Thêm vào giỏ hàng</button></p>
     </section>
     <section class="product"> 
         <img src="https://levents.asia/wp-content/uploads/2022/09/A3-font-552x944-100.jpg" alt="Sản phẩm 3">
          <h2>MAXIONS® | DORAEMON MINI CAT POLO/ WHITE</h2>
          <p style="color: red">Giá:288,500vnđ </p>
-         <button>Thêm vào giỏ hàng</button>
+         <p><button onclick="addCart(1,288500)">Thêm vào giỏ hàng</button></p>
     </section>
     <section class="product"> 
         <img src="https://levents.asia/wp-content/uploads/2022/09/C2-font-552x944-100.jpg" alt="Sản phẩm 3">
-         <h2> MAXIONS® | DORAEMON CAT TEE/ GREY</h2>
+         <h2 > MAXIONS® | DORAEMON CAT TEE/ GREY</h2>
          <p style="color: red">Giá:276,500vnđ </p>
-         <button>Thêm vào giỏ hàng</button>
+         <p><button onclick="addCart(1,276500)">Thêm vào giỏ hàng</button></p>
     </section>
     
    </main>
@@ -225,10 +227,127 @@
 </div>
 <header style="background-color: black; color: white; padding: 8px;">
     <p style="text-align: center;">Maxions® - Share your color with the world </p></p>
-
+    <div>
+        <p id="cart-count">Giỏ hàng: 0 sản phẩm</p>
+    </div>
+    
 </header>
 </div>
 
+<script>
+const productData =[
+{
+    id:1,
+    img:"https://levents.asia/wp-content/uploads/2022/09/B1-font-552x944-100.jpg",
+    name:'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+    price: 185000,
+    desc: 'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+
+},
+{
+    id:2,
+    img:"https://levents.asia/wp-content/uploads/2022/09/B1-font-552x944-100.jpg",
+    name:'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+    price: 185000,
+    desc: 'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+
+},
+{
+    id:3,
+    img:"https://levents.asia/wp-content/uploads/2022/09/B1-font-552x944-100.jpg",
+    name:'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+    price: 185000,
+    desc: 'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+
+},
+{
+    id:4,
+    img:"https://levents.asia/wp-content/uploads/2022/09/B1-font-552x944-100.jpg",
+    name:'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+    price: 185000,
+    desc: 'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+
+},
+{
+    id:5,
+    img:"https://levents.asia/wp-content/uploads/2022/09/B1-font-552x944-100.jpg",
+    name:'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+    price: 185000,
+    desc: 'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+
+},
+{
+    id:6,
+    img:"https://levents.asia/wp-content/uploads/2022/09/B1-font-552x944-100.jpg",
+    name:'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+    price: 185000,
+    desc: 'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+
+},
+{
+    id:7,
+    img:"https://levents.asia/wp-content/uploads/2022/09/B1-font-552x944-100.jpg",
+    name:'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+    price: 185000,
+    desc: 'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+
+},
+{
+    id:8,
+    img:"https://levents.asia/wp-content/uploads/2022/09/B1-font-552x944-100.jpg",
+    name:'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+    price: 185000,
+    desc: 'MAXIONS® | DORAEMON COLLAB TEE/BLACK',
+
+},
+
     
+];
+
+
+
+        
+        function addCart(id, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    let indexCart = cart.findIndex((item) => item.id === id);
+
+    if (indexCart !== -1) {
+        cart[indexCart].quantity += 1;
+        cart[indexCart].total = cart[indexCart].quantity * price;
+    } else {
+        cart.push({ id, quantity: 1, total: price });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    console.log('Đã thêm hoặc cập nhật sản phẩm trong giỏ hàng');
+}
+
+function renderCart() {
+    // Hàm để hiển thị giỏ hàng có thể được thêm ở đây sau.
+}
+
+// Gọi hàm để hiển thị sản phẩm
+renderCart();
+
+
+function renderCart(){
+    let element ='';
+    for(let i =0; i< productData.length; i++){
+        element +=`
+        <div class ='card'>
+        <img scr='${productData[i].img}' alt='Denim Jeans'
+        style ="width: 100%">
+        <h1>${productData[i].name}</h1>
+        <p class ='price'>${productData[i].price.toLocaleString()}d</p>
+        <p>${productData[i].desc}</p>
+        <p><button onclick ='addCart'(${productData[i].id})Add to Cart</p>
+        </div>
+        `
+    }
+    document.getElementById('cartlist').innerHTML =element;
+}
+renderCart();
+    </script>
 </body>
 </html>
